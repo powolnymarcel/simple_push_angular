@@ -14,7 +14,7 @@
 </head>
 <body style="font:17px Consolas;">
 
-<!--THE VIEW.-->
+<!--La vue -->
 <div ng-app="monApp"
 
 	 ng-init="liste=[
@@ -30,7 +30,7 @@
 
 		<h3>Fruits et prix</h3>
 
-		<!-- LOOP.-->
+		<!-- La boucle.-->
 		<ul ng-repeat="fruits in liste">
 
 			<li>{{ fruits.nom + ' - ' + (fruits.prix | currency) }}</li>
@@ -55,10 +55,10 @@
 	monApp.controller('MonCtrl', ['$scope', function ($fruit) {
 				$fruit.ajout = function () {
 
-					// ADD A NEW ELEMENT.
+					// Ajouter un nouvel element.
 					$fruit.liste.push({ nom: $fruit.nom, prix: $fruit.prix });
 
-					// CLEAR THE FIELDS.
+					// Vider les champs
 					$fruit.nom = '';
 					$fruit.prix = '';
 				}
